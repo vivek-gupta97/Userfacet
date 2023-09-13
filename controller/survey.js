@@ -32,7 +32,7 @@ exports.submitSurvey = async (req, res, next) => {
 		err.statusCode = 422;
 		return next(err);
 	}
-	if (!response || !(response instanceof Array) || response.length == 20) {
+	if (!response || !(response instanceof Array) || response.length != 20) {
 		const err = new Error('Incorrect Response values');
 		err.statusCode = 422;
 		return next(err);
