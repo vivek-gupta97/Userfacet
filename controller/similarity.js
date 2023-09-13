@@ -63,6 +63,6 @@ exports.getSimilarity = async (req, res, next) => {
 		});
 	}
 
-	sim = sim.slice((page - 1) * 2, 2 * page);
+	sim = sim.slice((page - 1) * 5, 5 * page);
 	res.json(sim);
 };
